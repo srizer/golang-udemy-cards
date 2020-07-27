@@ -23,21 +23,20 @@ func main() {
 		},
 	}
 
-	// &variable: give me the memory address of
-	// the value this variable is pointing at
-	jimPointer := &jim
-	jimPointer.updateName("Jimmy")
+	jim.updateName("Jimmy")
 	jim.print()
 }
-
-// *pointer: give me the value this
-// memory address is pointing at
 
 // *person: type description, means we're working with a pointer to a person
 // *pointerToPerson: operator, means we want to manipulate the value the pointer references
 func (pointerToPerson *person) updateName(newFirstName string) {
 	(*pointerToPerson).firstName = newFirstName
 }
+
+// *pointer: give me the value this
+// memory address is pointing at
+// &variable: give me the memory address of
+// the value this variable is pointing at
 
 // [0001: person{firstName:"Jim"...}]
 // [address, value]
